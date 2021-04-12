@@ -6,13 +6,7 @@
   echo '<nav>';
   echo '<h2>Consulter :</h2>' ;
   echo '<ul>' ;
-  echo '<li>
-          Abris
-          <ul>
-            <li><a href="'.$home.'index.php/abris">Les abris</a></li>
-            <li><a href="'.$home.'index.php/abris/creer">Ajouter un abri</a></li>
-          </ul>
-        </li>';
+  echo '<li><a href="'.$home.'index.php/abris">Les abris</a></li>';
   echo '<li><a href="'.$home.'index.php/guides">Les guides</a></li>';
   echo '<li><a href="'.$home.'index.php/sommets">Les sommets</a></li>';
   echo '<li><a href="'.$home.'index.php/vallees">Les vallées</a></li>';

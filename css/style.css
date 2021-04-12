@@ -15,7 +15,7 @@ h1, h2 {
     text-transform: uppercase;
 }
 
-a, a:active, a:visited {
+a:active, a:visited {
     color:#F1F1E6;
 }
 
@@ -23,12 +23,7 @@ header {
     margin-bottom: 6vh;
 }
 
-nav h2 {
-    margin-top: 8vh;
-    margin-bottom: 5vh;
-}
-
-nav>ul {
+nav ul {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -39,7 +34,7 @@ nav>ul {
     display:flex;
 }
 
-nav>li, header a, header a:active, header a:visited {
+nav a, nav a:active, nav a:visited, header a, header a:active, header a:visited {
     background-color: #F6F8FF;
     color: #13346A;
     cursor: pointer;
@@ -50,25 +45,14 @@ nav>li, header a, header a:active, header a:visited {
     border-radius: 5px;
 }
 
-nav>li:hover, header a:hover, input[type='submit']:hover {
+nav a:hover, header a:hover, input[type='submit']:hover {
     background-color: #F1F1E6;
     color: #5D8DF7;
 }
 
-nav>li {
-    position: relative;
-}
-
-nav>li ul {
-    display: none;
-}
-
-
-nav>li:hover ul {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+nav h2 {
+    margin-top: 8vh;
+    margin-bottom: 5vh;
 }
 
 main {
@@ -104,21 +88,7 @@ th, td {
     padding: 2vh 2vw;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input, select {
-    color: #F6F8FF;
-    margin-bottom: 2vh;
-}
-
-select option {
-    color: #5D8DF7;
-}
-
-input[type='text'], select {
+input[type='text'] {
     background-color: transparent;
     border: 2px solid#5D8DF7;
     border-radius: 5px;
@@ -138,5 +108,4 @@ input[type='submit'] {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
-    margin-top: 3vh;
 }
