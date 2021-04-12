@@ -13,14 +13,14 @@ class Guides_model extends CI_Model{
 
   public function find($id){
     //SQL standard
-    $sql = "select * from employes where code_Guides = ".$id.";";
+    $sql = "select * from guides where code_Guides = ".$id.";";
     $query = $this->db->query($sql);
     return $query->result();
   }
 
   public function create($nom, $prenom, $email, $motDePasse){
     $data = array('nom_Guides'=>$nom, 'prenom_Guides'=>$prenom, 'email_Guides'=>$email, 'motdepasse_Guides'=>$motDePasse);
-    return $this->db->insert('employes', $data);
+    return $this->db->insert('guides', $data);
   }
 }
 ?>
