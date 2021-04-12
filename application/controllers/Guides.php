@@ -24,27 +24,72 @@ class Guides extends CI_Controller{
     $this->load->view('footer');
   }
 
-  /*public function creer(){
-    $this->load->model('employes_model');
+  public function creer(){
+    $this->load->model('guides_model');
     $this->load->helper('form');
+    $this->load->helper('url');
     $this->load->library('form_validation');
 
-    $data['titre'] = 'Creer un employé';
+    $data['titre'] = 'Ajouter un guide';
 
     $this->form_validation->set_rules('nom', 'Nom', 'required');
     $this->form_validation->set_rules('prenom', 'Prenom', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required');
+    $this->form_validation->set_rules('mdp', 'Mot de passe', 'required');
 
     if ($this->form_validation->run() === TRUE){
-      $nom = $this->input->post('nom');
-      $prenom = $this->input->post('prenom');
-      $this->employes_model->create($nom, $prenom);
+        $nom = $this->input->post('nom');
+        $prenom = $this->input->post('prenom');
+        $email = $this->input->post('email');
+        $mdp = $this->input->post('mdp');
+        $this->guides_model->create($nom, $prenom, $email, $mdp);
+
+        redirect('/guides', 'refresh');
+
+    } else {
+        $this->load->view('header', $data);
+        $this->load->view('guides/creer', $data);
+        $this->load->view('footer');
     }
+  }
 
-    $data['employes'] = $this->employes_model->get();
+  public function modifier($id){
+        $this->load->model('guides_model');
+        $this->load->helper('form');
+        $this->load->helper('url');
+        $this->load->library('form_validation');
 
-    $this->load->view('header', $data);
-    $this->load->view('employes/creer', $data);
-    $this->load->view('footer');
-  }*/
+        $data['titre'] = 'Modifier le guide '.$id ;
+
+        $this->form_validation->set_rules('nom', 'Nom', 'required');
+        $this->form_validation->set_rules('prenom', 'Prenom', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('mdp', 'Mot de passe', 'required');
+
+        if ($this->form_validation->run() === TRUE){
+            $nom = $this->input->post('nom');
+            $prenom = $this->input->post('prenom');
+            $email = $this->input->post('email');
+            $mdp = $this->input->post('mdp');
+            $this->guides_model->update($id, $nom, $prenom, $email, $mdp);
+
+            redirect('/guides', 'refresh');
+        } else {
+            $data['guides'] = $this->guides_model->find($id);
+
+            $this->load->view('header');
+            $this->load->view('guides/modifier', $data);
+            $this->load->view('footer');
+        }
+  }
+
+  public function supprimer($id){
+    $this->load->helper('url');
+    $this->load->model('guides_model');
+
+    $this->guides_model->delete($id);
+
+    redirect('/guides', 'refresh');
+  }
 }
 ?>

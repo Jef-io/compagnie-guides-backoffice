@@ -58,7 +58,8 @@ $route['abris/(:any)'] = 'abris/parId/$1';
 $route['abris'] = 'abris/tous';
 
 $route['guides/creer'] = 'guides/creer';
-$route['guides/(:any)'] = 'guides/parId/$1';
+$route['guides/supprimer/(:any)'] = 'guides/supprimer/$1';
+$route['guides/modifier/(:any)'] = 'guides/modifier/$1';
 $route['guides'] = 'guides/tous';
 
 $route['sommets/creer'] = 'sommets/creer';
