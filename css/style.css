@@ -4,8 +4,8 @@ body {
     font-family: 'Overpass', sans-serif;
     margin: 0;
     padding: 8vh 5vw;
-    background-color: #13346A;
-    color: #F6F8FF;
+    background-color: #1d2d50;
+    color: #fcdab7; 
     min-height: 100vh;
     box-sizing: border-box;
     position: relative;
@@ -16,7 +16,7 @@ h1, h2 {
 }
 
 a:active, a:visited {
-    color:#F1F1E6;
+    color:#fcdab7;
 }
 
 header {
@@ -25,18 +25,20 @@ header {
 
 nav ul {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
-    display:flex;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+nav li {
+    width: fit-content;
 }
 
 nav a, nav a:active, nav a:visited, header a, header a:active, header a:visited {
-    background-color: #F6F8FF;
-    color: #13346A;
+    background-color: #fcdab7;
+    color: #1d2d50;
     cursor: pointer;
     padding: 2vh 2vw;
     text-transform: uppercase;
@@ -46,8 +48,8 @@ nav a, nav a:active, nav a:visited, header a, header a:active, header a:visited 
 }
 
 nav a:hover, header a:hover, input[type='submit']:hover {
-    background-color: #F1F1E6;
-    color: #5D8DF7;
+    background-color: #fcdab7;
+    color: #1e5f74;
 }
 
 nav h2 {
@@ -60,7 +62,7 @@ main {
 }
 
 footer {
-    color: #F1F1E6 ;
+    color: #fcdab7 ;
     position: absolute;
     bottom: 6vh ;
     font-size: 0.8em;
@@ -76,7 +78,7 @@ table {
 }
 
 table, th, td {
-    border: 2px solid#5D8DF7;
+    border: 2px solid#1e5f74;
     border-collapse: collapse;
 }
 
@@ -90,19 +92,19 @@ th, td {
 
 input[type='text'] {
     background-color: transparent;
-    border: 2px solid#5D8DF7;
+    border: 2px solid#1e5f74;
     border-radius: 5px;
     padding: 1vh 1vw;
     outline: transparent;
 }
 
 input[type='text']:hover, input[type='text']:focus, input[type='text']:active {
-    border-color: #F1F1E6;
+    border-color: #fcdab7;
 }
 
 input[type='submit'] {
-    background-color: #F6F8FF;
-    color: #13346A;
+    background-color: #fcdab7;
+    color: #1d2d50;
     cursor: pointer;
     padding: 2vh 2vw;
     text-transform: uppercase;
