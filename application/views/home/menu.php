@@ -4,6 +4,7 @@
   $home='http://localhost:80/RTAI/compagnie-guides-backoffice/';
 
   echo '<nav>';
+  echo '<div>' ;
   echo '<h2>Consulter :</h2>' ;
   echo '<ul>' ;
   echo '<li><a href="'.$home.'index.php/abris">Les abris</a></li>';
@@ -12,7 +13,9 @@
   echo '<li><a href="'.$home.'index.php/vallees">Les vallées</a></li>';
   echo '<li><a href="'.$home.'index.php/ascensions">Les ascensions</a></li>';
   echo '</ul>' ;
+  echo '</div>' ;
 
+  echo '<div>' ;
   echo '<h2>Ajouter :</h2>' ;
   echo '<ul>' ;
   echo '<li><a href="'.$home.'index.php/abris/creer">Ajouter un abri</a></li>';
@@ -21,6 +24,7 @@
   echo '<li><a href="'.$home.'index.php/vallees/creer">Ajouter une vallée</a></li>';
   echo '<li><a href="'.$home.'index.php/ascensions/creer">Ajouter une ascension</a></li>';
   echo '</ul>' ;
+  echo '</div>' ;
   echo '</nav>';
 
 ?>

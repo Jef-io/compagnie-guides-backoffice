@@ -29,7 +29,14 @@
     <input type="text" name="telGardien_Abris" />
 
     <label for="code_Vallees">Code de la vallée</label>
-    <input type="text" name="code_Vallees" required/>
+    <select name="code_Vallees" required>
+      <option value="">--Please choose an option--</option>
+      <?php
+        foreach($vallees as $vallee){
+          echo '<option value="'.$vallee->code_Vallees.'">'.$vallee->nom_Vallees.'</option>' ;
+        }
+      ?>
+    </select>
 
     <input type="submit" name="submit" value="Créer un abri" />
 </form>

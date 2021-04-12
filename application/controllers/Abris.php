@@ -4,10 +4,19 @@ class Abris extends CI_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('abris_model');
+        $this->load->model('vallees_model');
     }
 
   public function tous(){
-    $data['abris'] = $this->abris_model->get();
+    $abris = $this->abris_model->get();
+
+    $vallees = array();
+    foreach($abris as $abri){
+      $vallees[$abri->code_Abris]['nom_Vallees'] = $this->vallees_model->find($abri->code_Vallees);
+    }
+
+    $data['abris'] = $abris;
+    $data['vallees'] = $vallees;
     $data['titre'] = 'Abris :';
 
     $this->load->view('header', $data);
@@ -37,7 +46,7 @@ class Abris extends CI_Controller {
     $this->form_validation->set_rules('prixNuit_Abris', 'Prix à la nuit');
     $this->form_validation->set_rules('prixRepas_Abris', 'Prix du repas');
     $this->form_validation->set_rules('telGardien_Abris', 'Téléphone du gardien');
-    $this->form_validation->set_rules('code_Vallees', 'Code de la vallée', 'required');
+    $this->form_validation->set_rules('code_Vallees', 'Vallée', 'required');
 
     if ($this->form_validation->run() === TRUE){
         $nom_Abris = $this->input->post('nom_Abris');
@@ -53,6 +62,7 @@ class Abris extends CI_Controller {
     }
 
     $data['abris'] = $this->abris_model->get();
+    $data['vallees'] = $this->vallees_model->get();
 
     $this->load->view('header', $data);
     $this->load->view('abris/creer', $data);
