@@ -17,7 +17,7 @@ class Abris extends CI_Controller {
 
   public function parId($id){
     $data['abris'] = $this->abris_model->find($id);
-    $data['titre'] = "Abris numéro".$id." : ";
+    $data['titre'] = "Abri numéro".$id." : ";
 
     $this->load->view('header', $data);
     $this->load->view('abris/tous', $data);
@@ -28,7 +28,7 @@ class Abris extends CI_Controller {
     $this->load->helper('form');
     $this->load->library('form_validation');
 
-    $data['titre'] = 'Creer un abris';
+    $data['titre'] = 'Creer un abri';
 
     $this->form_validation->set_rules('nom_Abris', 'Nom', 'required');
     $this->form_validation->set_rules('type_Abris', 'Type d\'abris', 'required');

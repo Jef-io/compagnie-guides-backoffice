@@ -31,5 +31,5 @@
     <label for="code_Vallees">Code de la vallée</label>
     <input type="text" name="code_Vallees" required/>
 
-    <input type="submit" name="submit" value="Créer un abris" />
+    <input type="submit" name="submit" value="Créer un abri" />
 </form>
