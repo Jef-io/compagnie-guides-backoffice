@@ -37,7 +37,7 @@ class Abris extends CI_Controller {
     $this->form_validation->set_rules('prixNuit_Abris', 'Prix à la nuit');
     $this->form_validation->set_rules('prixRepas_Abris', 'Prix du repas');
     $this->form_validation->set_rules('telGardien_Abris', 'Téléphone du gardien');
-    $this->form_validation->set_rules('code_Vallees', 'Code de la vallées', 'required');
+    $this->form_validation->set_rules('code_Vallees', 'Code de la vallée', 'required');
 
     if ($this->form_validation->run() === TRUE){
         $nom_Abris = $this->input->post('nom_Abris');
