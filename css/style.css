@@ -26,13 +26,21 @@ nav {
     justify-content: space-around;
 }
 
+/* nav div {
+    display: flex;
+    flex-direction: column;
+} */
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-rows: repeat(auto, 1fr);
-    gap: 7vh 0;
+    display: flex;
+    flex-direction: column;
+    /* display: grid; */
+    /* grid-template-rows: repeat(auto, 1fr);
+    gap: 7vh 0; */
+    width: 30vw;
 }
 
 nav a, nav a:active, nav a:visited, header a, header a:active, header a:visited, input[type='submit'] {
@@ -44,7 +52,6 @@ nav a, nav a:active, nav a:visited, header a, header a:active, header a:visited,
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
 nav a:hover, header a:hover, input[type='submit']:hover {
@@ -57,7 +64,7 @@ nav h2 {
 }
 
 main {
-    margin-bottom: 5vh;
+    margin-bottom: 6vh;
 }
 
 footer {
@@ -99,7 +106,7 @@ table a, table a:focus, table a:active, table a:visited {
     text-transform: uppercase;
 }
 
-input[type='text'], select {
+input, select {
     background-color: transparent;
     border: 2px solid#1e5f74;
     border-radius: 5px;
@@ -113,10 +120,10 @@ select option {
     color: #1e5f74;
 }
 
-input[type='text']:hover, input[type='text']:focus, input[type='text']:active {
+input:hover, input:focus, input:active {
     border-color: #F1F1E6;
 }
 
-input[type='text']:disabled {
+input:disabled {
     background-color: #1e5f74;
 }

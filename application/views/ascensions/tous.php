@@ -14,11 +14,11 @@
         foreach($abris[$counter]['nom_Abris'] as $abri){
             echo '<td>'.$abri->nom_Abris.'</td>';
         }
-        echo '<td>'.$ascension->difficulte_Ascensions.'</td>';
-        echo '<td>'.$ascension->duree_Ascensions.'</td>';
+        echo '<td>'.$ascension->difficulte_Ascension.'</td>';
+        echo '<td>'.$ascension->duree_Ascension.'</td>';
 
-        echo '<td><a href="'.$home.'/ascensions/modifier/'.$ascension->code_Sommets.'">Modifier</a> | ';
-        echo '<a href="'.$home.'/ascensions/supprimer/'.$ascension->code_Sommets.'">Supprimer</a></td>';
+        echo '<td><a href="'.$home.'/ascensions/modifier/'.$ascension->code_Sommets.'&'.$ascension->code_Abris.'">Modifier</a> | ';
+        echo '<a href="'.$home.'/ascensions/supprimer/'.$ascension->code_Sommets.'&'.$ascension->code_Abris.'">Supprimer</a></td>';
         echo '</tr>' ;
         $counter++;
     }

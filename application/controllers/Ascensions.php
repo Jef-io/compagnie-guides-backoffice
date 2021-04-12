@@ -47,15 +47,15 @@ class Ascensions extends CI_Controller {
 
     $this->form_validation->set_rules('code_Sommets', 'Sommet', 'required');
     $this->form_validation->set_rules('code_Abris', 'Abri', 'required');
-    $this->form_validation->set_rules('difficulte_Ascensions', 'Difficulté de l\'ascensions', 'required');
-    $this->form_validation->set_rules('duree_Ascensions', 'Durée de l\'ascension', 'required');
+    $this->form_validation->set_rules('difficulte_Ascension', 'Difficulté de l\'ascension', 'required');
+    $this->form_validation->set_rules('duree_Ascension', 'Durée de l\'ascension', 'required');
 
     if ($this->form_validation->run() === TRUE){
-        $nom_Ascensions = $this->input->post('code_Sommets');
-        $type_Ascensions = $this->input->post('code_Abris');
-        $altitude_Ascensions = $this->input->post('difficulte_Ascensions');
-        $places_Ascensions = $this->input->post('duree_Ascensions');
-        $this->ascensions_model->create($code_Sommets, $code_Abris, $difficulte_Ascensions, $duree_Ascensions);
+        $code_Sommets = $this->input->post('code_Sommets');
+        $code_Abris = $this->input->post('code_Abris');
+        $difficulte_Ascension = $this->input->post('difficulte_Ascension');
+        $duree_Ascension = $this->input->post('duree_Ascension');
+        $this->ascensions_model->create($code_Sommets, $code_Abris, $difficulte_Ascension, $duree_Ascension);
     }
 
     $data['ascensions'] = $this->ascensions_model->get();
@@ -77,18 +77,18 @@ class Ascensions extends CI_Controller {
 
     $this->form_validation->set_rules('code_Sommets', 'Sommet', 'required');
     $this->form_validation->set_rules('code_Abris', 'Abri', 'required');
-    $this->form_validation->set_rules('difficulte_Ascensions', 'Difficulté de l\'ascensions', 'required');
-    $this->form_validation->set_rules('duree_Ascensions', 'Durée de l\'ascension', 'required');
+    $this->form_validation->set_rules('difficulte_Ascension', 'Difficulté de l\'ascension', 'required');
+    $this->form_validation->set_rules('duree_Ascension', 'Durée de l\'ascension', 'required');
 
 
     if ($this->form_validation->run() === TRUE){
-        $nom_Ascensions = $this->input->post('code_Sommets');
-        $type_Ascensions = $this->input->post('code_Abris');
-        $altitude_Ascensions = $this->input->post('difficulte_Ascensions');
-        $places_Ascensions = $this->input->post('duree_Ascensions');
-        $this->ascensions_model->create($code_Sommets, $code_Abris, $difficulte_Ascensions, $duree_Ascensions);
+      $code_Sommets = $this->input->post('code_Sommets');
+      $code_Abris = $this->input->post('code_Abris');
+      $difficulte_Ascension = $this->input->post('difficulte_Ascension');
+      $duree_Ascension = $this->input->post('duree_Ascension');
+      $this->ascensions_model->create($code_Sommets, $code_Abris, $difficulte_Ascension, $duree_Ascension);
 
-        redirect('/ascensions', 'refresh');
+      redirect('/ascensions', 'refresh');
     } else {
         $data['ascensions'] = $this->ascensions_model->find($id_sommet, $id_abri);
 

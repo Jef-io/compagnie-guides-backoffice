@@ -14,21 +14,21 @@
     </select>
 
     <label for="altitude_Abris">Altitude</label>
-    <input type="text" name="altitude_Abris" required/>
+    <input type="number" name="altitude_Abris" required/>
 
     <label for="places_Abris">Nombre de places</label>
-    <input type="text" name="places_Abris" />
+    <input type="number" name="places_Abris" />
 
     <label for="prixNuit_Abris">Prix à la nuit</label>
-    <input type="text" name="prixNuit_Abris" />
+    <input type="number" name="prixNuit_Abris" />
 
     <label for="prixRepas_Abris">Prix du repas</label>
-    <input type="text" name="prixRepas_Abris" />
+    <input type="number" name="prixRepas_Abris" />
 
     <label for="telGardien_Abris">Téléphone du gardien</label>
-    <input type="text" name="telGardien_Abris" />
+    <input type="tel" name="telGardien_Abris" />
 
-    <label for="code_Vallees">Code de la vallée</label>
+    <label for="code_Vallees">Vallée</label>
     <select name="code_Vallees" required>
       <option value="">--Please choose an option--</option>
       <?php

@@ -10,7 +10,7 @@
   <input type="text" name="prenom" />
 
   <label for="email">Email</label>
-  <input type="text" name="email" />
+  <input type="email" name="email" />
 
   <label for="mdp">Mot de passe</label>
   <input type="text" name="mdp" />
