@@ -1,8 +1,11 @@
 <?php
+
+    $home='http://localhost:80/RTAI/compagnie-guides-backoffice/index.php';
+
     echo '<h1>'.$titre.'</h1>';
 
     echo '<table><thead><tr><th>Nom</th><th>Type</th><th>Altitude</th><th>Nombre de places</th><th>Prix de la nuit</th>' ;
-    echo '<th>Prix du repas</th><th>Téléphone du gardien</th><th>Vallée</th></tr></thead><tbody>' ;
+    echo '<th>Prix du repas</th><th>Téléphone du gardien</th><th>Vallée</th><th>Actions</th></tr></thead><tbody>' ;
     foreach ($abris as $abri){
         echo '<tr>' ;
         echo '<td>'.$abri->nom_Abris.'</td>';
@@ -15,6 +18,8 @@
         foreach($vallees[$abri->code_Abris]['nom_Vallees'] as $vallee){
             echo '<td>'.$vallee->nom_Vallees.'</td>';
         }
+        echo '<td><a href="'.$home.'/abris/modifier/'.$abri->code_Abris.'">Modifier</a> | ';
+        echo '<a href="'.$home.'/abris/supprimer/'.$abri->code_Abris.'">Supprimer</a></td>';
         echo '</tr>' ;
     }
     echo '</tbody></table>' ;

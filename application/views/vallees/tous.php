@@ -7,8 +7,8 @@
     foreach ($vallees as $vallee){
         echo '<tr>' ;
         echo '<td>'.$vallee->nom_Vallees.'</td>';
-        echo '<td><a style="color: #F1F1E6;" href="'.$home.'/vallees/modifier/'.$vallee->code_Vallees.'">Modifier</a>';
-        echo '</br><a style="color: #F1F1E6;" href="'.$home.'/vallees/supprimer/'.$vallee->code_Vallees.'">Supprimer</a></td>';
+        echo '<td><a style="color: #F1F1E6;" href="'.$home.'/vallees/modifier/'.$vallee->code_Vallees.'">Modifier</a> | ';
+        echo '<a style="color: #F1F1E6;" href="'.$home.'/vallees/supprimer/'.$vallee->code_Vallees.'">Supprimer</a></td>';
         echo '</tr>' ;
     }
     echo '</tbody></table>' ;

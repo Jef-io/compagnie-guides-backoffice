@@ -10,8 +10,8 @@
         echo '<td>'.$guide->nom_Guides.'</td>';
         echo '<td>'.$guide->prenom_Guides.'</td>';
         echo '<td>'.$guide->email_Guides.'</td>';
-        echo '<td><a href="'.$home.'/guides/modifier/'.$guide->code_Guides.'">Modifier</a>';
-        echo '</br><a href="'.$home.'/guides/supprimer/'.$guide->code_Guides.'">Supprimer</a></td>';
+        echo '<td><a href="'.$home.'/guides/modifier/'.$guide->code_Guides.'">Modifier</a> | ';
+        echo '<a href="'.$home.'/guides/supprimer/'.$guide->code_Guides.'">Supprimer</a></td>';
         echo '</tr>' ;
     }
     echo '</tbody></table>' ;

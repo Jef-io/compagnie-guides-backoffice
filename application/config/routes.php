@@ -55,6 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['abris/creer'] = 'abris/creer';
 $route['abris/(:any)'] = 'abris/parId/$1';
+$route['abris/supprimer/(:any)'] = 'abris/supprimer/$1';
+$route['abris/modifier/(:any)'] = 'abris/modifier/$1';
 $route['abris'] = 'abris/tous';
 
 $route['guides/creer'] = 'guides/creer';

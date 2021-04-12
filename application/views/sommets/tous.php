@@ -8,8 +8,8 @@
         echo '<tr>' ;
         echo '<td>'.$sommet->nom_Sommets.'</td>';
         echo '<td>'.$sommet->altitude_Sommets.'</td>';
-        echo '<td><a style="color: #F1F1E6;" href="'.$home.'/sommets/modifier/'.$sommet->code_Sommets.'">Modifier</a>';
-        echo '</br><a style="color: #F1F1E6;" href="'.$home.'/sommets/supprimer/'.$sommet->code_Sommets.'">Supprimer</a></td>';
+        echo '<td><a style="color: #F1F1E6;" href="'.$home.'/sommets/modifier/'.$sommet->code_Sommets.'">Modifier</a> | ';
+        echo '<a style="color: #F1F1E6;" href="'.$home.'/sommets/supprimer/'.$sommet->code_Sommets.'">Supprimer</a></td>';
         echo '</tr>' ;
     }
     echo '</tbody></table>' ;
