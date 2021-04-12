@@ -13,6 +13,7 @@
         echo '<td>'.$abri->prixRepas_Abris.'</td>';
         echo '<td>'.$abri->telGardien_Abris.'</td>';
         echo '<td>'.$abri->code_Vallees.'</td>';
+        echo '</tr>' ;
     }
-    echo '</tbody></table>'
+    echo '</tbody></table>' ;
 ?>

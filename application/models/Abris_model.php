@@ -23,7 +23,7 @@ class Abris_model extends CI_Model {
                            $prixNuit_Abris, $prixRepas_Abris, $telGardien_Abris, $code_Vallees){
         $data = array('nom_Abris'=>$nom_Abris, 'type_Abris'=>$type_Abris, 
                       'altitude_Abris'=>$altitude_Abris, 'places_Abris'=>$places_Abris, 'prixNuit_Abris'=>$prixNuit_Abris,
-                      'prixRepas_Abris'=>$prixRepas_Abris, 'telGardien_Abris'=>$telGardien_Abris, 'code_Vallees'=>$code_Vallees););
+                      'prixRepas_Abris'=>$prixRepas_Abris, 'telGardien_Abris'=>$telGardien_Abris, 'code_Vallees'=>$code_Vallees);
         return $this->db->insert('abris', $data);
     }
 }
