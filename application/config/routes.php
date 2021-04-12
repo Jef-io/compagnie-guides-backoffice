@@ -49,6 +49,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'home/view';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['abris/creer'] = 'abris/creer';
+$route['abris/(:any)'] = 'abris/parId/$1';
+$route['abris'] = 'abris/tous';
+
+$route['guides/creer'] = 'guides/creer';
+$route['guides/(:any)'] = 'guides/parId/$1';
+$route['guides'] = 'guides/tous';
+
+$route['sommets/creer'] = 'sommets/creer';
+$route['sommets/(:any)'] = 'sommets/parId/$1';
+$route['sommets'] = 'sommets/tous';
+
+$route['vallees/creer'] = 'vallees/creer';
+$route['vallees/(:any)'] = 'vallees/parId/$1';
+$route['vallees'] = 'vallees/tous';
+
+$route['ascensions/creer'] = 'ascensions/creer';
+$route['ascensions/(:any)'] = 'ascensions/parId/$1';
+$route['ascensions'] = 'ascensions/tous';
+
+$route['randonnees'] = 'randonnees/tous';
+$route['randonnees/(:any)'] = 'randonnees/parId/$1';
