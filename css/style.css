@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+    padding: 8vh 5vw;
+    background-color: #13346A;
+    color: #F6F8FF;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+a:active, a:visited {
+    color:#F1F1E6;
+}
+
+header {
+    margin-bottom: 6vh;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+}
+
+nav a, nav a:active, nav a:visited, header a, header a:active, header a:visited {
+    background-color: #F6F8FF;
+    color: #13346A;
+    cursor: pointer;
+    padding: 2vh 2vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+nav a:hover, header a:hover, input[type='submit']:hover {
+    background-color: #F1F1E6;
+    color: #5D8DF7;
+}
+
+nav h2 {
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+}
+
+main {
+    margin-bottom: 5vh;
+}
+
+footer {
+    color: #F1F1E6 ;
+    position: absolute;
+    bottom: 6vh ;
+    font-size: 0.8em;
+}
+
+footer, footer p {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+table, th, td {
+    border: 2px solid#5D8DF7;
+    border-collapse: collapse;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 2vh 2vw;
+}
+
+input[type='text'] {
+    background-color: transparent;
+    border: 2px solid#5D8DF7;
+    border-radius: 5px;
+    padding: 1vh 1vw;
+    outline: transparent;
+}
+
+input[type='text']:hover, input[type='text']:focus, input[type='text']:active {
+    border-color: #F1F1E6;
+}
+
+input[type='submit'] {
+    background-color: #F6F8FF;
+    color: #13346A;
+    cursor: pointer;
+    padding: 2vh 2vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+}

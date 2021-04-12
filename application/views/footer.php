@@ -1,6 +1,6 @@
-    <br>
+    </main>
     <footer>
-      <em>&copy; RTAI</em>
+      <p>&copy; RTAI - Maïa DA SILVA & Jef SCHOOLMEESTER</p>
     </footer>
   </body>
 </html>
