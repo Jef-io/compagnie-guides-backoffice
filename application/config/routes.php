@@ -63,12 +63,16 @@ $route['guides/modifier/(:any)'] = 'guides/modifier/$1';
 $route['guides'] = 'guides/tous';
 
 $route['sommets/creer'] = 'sommets/creer';
-$route['sommets/(:any)'] = 'sommets/parId/$1';
+$route['sommets/supprimer/(:any)'] = 'sommets/supprimer/$1';
+$route['sommets/modifier/(:any)'] = 'sommets/modifier/$1';
 $route['sommets'] = 'sommets/tous';
+// $route['sommets/(:any)'] = 'sommets/parId/$1';
 
 $route['vallees/creer'] = 'vallees/creer';
-$route['vallees/(:any)'] = 'vallees/parId/$1';
+$route['vallees/supprimer/(:any)'] = 'vallees/supprimer/$1';
+$route['vallees/modifier/(:any)'] = 'vallees/modifier/$1';
 $route['vallees'] = 'vallees/tous';
+// $route['vallees/(:any)'] = 'vallees/parId/$1';
 
 $route['ascensions/creer'] = 'ascensions/creer';
 $route['ascensions/(:any)'] = 'ascensions/parId/$1';
