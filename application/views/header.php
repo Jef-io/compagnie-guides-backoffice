@@ -6,11 +6,10 @@
   </head>
   <body>
     <?php
-      $home='http://localhost:80/2021/Demo_CI/';
+      $home='http://localhost:80/RTAI/compagnie-guides-backoffice/';
       echo '<header>';
 
       echo '<a href="'.$home.'index.php">Home</a>';
-      echo '<a href="'.$home.'index.php/about">About</a>';
 
       echo '</header>';
     ?>
