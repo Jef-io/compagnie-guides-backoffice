@@ -23,5 +23,17 @@ class Vallees_model extends CI_Model {
         $data = array('nom_Vallees'=>$nom_Vallees);
         return $this->db->insert('vallees', $data);
     }
+
+    
+    public function update($id, $nom_Vallees) {
+        $data = array('code_Vallees'=>$id, 'nom_Vallees'=>$nom_Vallees);
+        $this->db->where('code_Vallees', $data['code_Vallees']);
+        return $this->db->update('vallees', $data);
+    }
+    
+    public function delete($id) {
+        $this->db->where('code_Vallees', $id);
+        return $this->db->delete('vallees');
+    }
 }
 ?>
