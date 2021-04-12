@@ -12,6 +12,7 @@
   echo '<li><a href="'.$home.'index.php/sommets">Les sommets</a></li>';
   echo '<li><a href="'.$home.'index.php/vallees">Les vallées</a></li>';
   echo '<li><a href="'.$home.'index.php/ascensions">Les ascensions</a></li>';
+  echo '<li><a href="'.$home.'index.php/randonnees">Les randonnées</a></li>';
   echo '</ul>' ;
   echo '</div>' ;
 
