@@ -67,6 +67,7 @@ main {
 
 main>a {
     float: right;
+    margin-top: -5vh;
     margin-bottom: 2vh;
 }
 
