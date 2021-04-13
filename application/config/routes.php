@@ -77,7 +77,9 @@ $route['vallees'] = 'vallees/tous';
 // $route['vallees/(:any)'] = 'vallees/parId/$1';
 
 $route['ascensions/creer'] = 'ascensions/creer';
-$route['ascensions/(:any)'] = 'ascensions/parId/$1';
+$route['ascensions/supprimer/(:any)/(:any)'] = 'ascensions/supprimer/$1/$2';
+$route['ascensions/modifier/(:any)/(:any)'] = 'ascensions/modifier/$1/$2';
+// $route['ascensions/(:any)'] = 'ascensions/parId/$1';
 $route['ascensions'] = 'ascensions/tous';
 
 $route['randonnees'] = 'randonnees/tous';

@@ -17,8 +17,8 @@
         echo '<td>'.$ascension->difficulte_Ascension.'</td>';
         echo '<td>'.$ascension->duree_Ascension.'</td>';
 
-        echo '<td><a href="'.$home.'/ascensions/modifier/'.$ascension->code_Sommets.'&'.$ascension->code_Abris.'">Modifier</a> | ';
-        echo '<a href="'.$home.'/ascensions/supprimer/'.$ascension->code_Sommets.'&'.$ascension->code_Abris.'">Supprimer</a></td>';
+        echo '<td><a href="'.$home.'/ascensions/modifier/'.$ascension->code_Sommets.'/'.$ascension->code_Abris.'">Modifier</a> | ';
+        echo '<a href="'.$home.'/ascensions/supprimer/'.$ascension->code_Sommets.'/'.$ascension->code_Abris.'">Supprimer</a></td>';
         echo '</tr>' ;
         $counter++;
     }
