@@ -3,7 +3,7 @@
     $home='http://localhost:80/RTAI/compagnie-guides-backoffice/index.php';
 
     echo '<h1>'.$titre.'</h1>';
-
+    echo '<a href="'.$home.'/abris/creer/">Ajouter un abri</a>' ;
     echo '<table><thead><tr><th>Nom</th><th>Type</th><th>Altitude</th><th>Nombre de places</th><th>Prix de la nuit</th>' ;
     echo '<th>Prix du repas</th><th>Téléphone du gardien</th><th>Vallée</th><th>Actions</th></tr></thead><tbody>' ;
     foreach ($abris as $abri){

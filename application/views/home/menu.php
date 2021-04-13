@@ -6,14 +6,12 @@
   echo '<nav>';
   echo '<div>' ;
   echo '<h2>Consulter :</h2>' ;
-  // echo '<ul>' ;
   echo '<a href="'.$home.'index.php/abris">Les abris</a>';
   echo '<a href="'.$home.'index.php/guides">Les guides</a>';
   echo '<a href="'.$home.'index.php/sommets">Les sommets</a>';
   echo '<a href="'.$home.'index.php/vallees">Les vallées</a>';
   echo '<a href="'.$home.'index.php/ascensions">Les ascensions</a>';
   echo '<a href="'.$home.'index.php/randonnees">Les randonnées</a>';
-  // echo '</ul>' ;
   echo '</div>' ;
 
   echo '<div>' ;

@@ -2,7 +2,7 @@
 
     $home='http://localhost:80/RTAI/compagnie-guides-backoffice/index.php';
     echo '<h1>'.$titre.'</h1>';
-
+    echo '<a href="'.$home.'/vallees/creer/">Ajouter une vallée</a>' ;
     echo '<table><thead><tr><th>Nom</th><th>Actions</th></tr></thead><tbody>' ;
     foreach ($vallees as $vallee){
         echo '<tr>' ;
