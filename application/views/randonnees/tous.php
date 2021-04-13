@@ -8,7 +8,7 @@
     foreach ($randonnees as $randonnee){
         echo '<tr>' ;
         foreach($guides[$randonnee->code_Guides]['nom_Guides'] as $guide){
-            echo '<td>'.$guide->nom_Guides.'</td>';
+            echo '<td>'.$guide->nom_Guides." ".$guide->prenom_Guides.'</td>';
         }
         echo '<td>'.$randonnee->nbPersonnes_Randonnees.'</td>';
         echo '<td>'.$randonnee->dateDebut_Randonnees.'</td>';
