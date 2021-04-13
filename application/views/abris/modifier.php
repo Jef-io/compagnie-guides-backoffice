@@ -11,19 +11,11 @@
     echo '<input type="text" name="nom_Abris" value="'.$abri->nom_Abris.'"/>';
 
     echo '<label for="type_Abris">Type</label>
-    <select name="type_Abris" required>
-      <option value="">--Please choose an option--</option>' ;
-      foreach($sommets as $sommet){
-        $value = $abri->type_Abris ;
-        if ($value === 'cabane') {
-          echo '<option value="cabane" selected>cabane</option>' ;
-          echo '<option value="refuge">refuge</option>' ;
-        } else if ($value === 'refuge') {
-          echo '<option value="cabane">cabane</option>' ;
-          echo '<option value="refuge" selected>refuge</option>' ;
-        }
-      }
-    echo '</select>' ;
+      <select name="difficulte_Ascension" required>
+        <option value="">--Please choose an option--</option>
+        <option value="cabane"'. ($abri->type_Abris = 'cabane' ? 'selected' : '') .'>cabane</option>
+        <option value="refuge"'. ($abri->type_Abris = 'refuge' ? 'selected' : '').'>refuge</option>
+      </select>' ;
 
     echo '<label for="altitude_Abris">Altitude</label>
     <input type="number" name="altitude_Abris" value="'.$abri->altitude_Abris.'"required/>' ;

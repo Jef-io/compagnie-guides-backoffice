@@ -95,23 +95,17 @@ class Abris extends CI_Controller {
       $prixRepas_Abris = $this->input->post('prixRepas_Abris');
       $telGardien_Abris = $this->input->post('telGardien_Abris');
       $code_Vallees = $this->input->post('code_Vallees');
-      $this->abris_model->update($id, $nom_Abris, $type_Abris, $altitude_Abris, $places_Abris, $prixNuit_Abris, 
+      $this->abris_model->update( $id, $nom_Abris, $type_Abris, $altitude_Abris, $places_Abris, $prixNuit_Abris, 
                                   $prixRepas_Abris, $telGardien_Abris, $code_Vallees);
 
       redirect('/abris', 'refresh');
     } else {
-        $abris = $this->abris_model->find($id);
-        $vallees = array();
-        foreach($abris as $abri){
-          $vallees[$abri->code_Abris]['nom_Vallees'] = $this->vallees_model->find($abri->code_Vallees);
-        }
+      $data['abris'] = $this->abris_model->find($id);
+      $data['vallees'] = $this->vallees_model->get();
 
-        $data['abris'] = $abris;
-        $data['vallees'] = $vallees;
-
-        $this->load->view('header');
-        $this->load->view('abris/modifier', $data);
-        $this->load->view('footer');
+      $this->load->view('header');
+      $this->load->view('abris/modifier', $data);
+      $this->load->view('footer');
     }
 }
 
