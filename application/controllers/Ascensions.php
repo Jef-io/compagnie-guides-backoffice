@@ -90,8 +90,21 @@ class Ascensions extends CI_Controller {
 
       redirect('/ascensions', 'refresh');
     } else {
-        $data['ascensions'] = $this->ascensions_model->find($id_sommet, $id_abri);
+        $ascensions = $this->ascensions_model->find($id_sommet, $id_abri);
 
+        $sommets = array();
+        $abris = array();
+        $counter=0;
+        foreach($ascensions as $ascension){
+          $sommets[$counter]['sommets'] = $this->sommets_model->find($id_sommet);
+          $abris[$counter]['abris'] = $this->abris_model->find($id_abri);
+          $counter++;
+        }
+    
+        $data['ascensions'] = $ascensions;
+        $data['sommets'] = $sommets;
+        $data['abris'] = $abris;
+ 
         $this->load->view('header');
         $this->load->view('ascensions/modifier', $data);
         $this->load->view('footer');
