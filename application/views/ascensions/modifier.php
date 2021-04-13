@@ -23,9 +23,9 @@
     echo '<label for="difficulte_Ascension">Niveau de difficulté</label>
     <select name="difficulte_Ascension" required>
       <option value="">--Please choose an option--</option>
-      <option value="debutant"'.if ($ascension->difficulte_Ascension == 'debutant') { echo 'selected'}.'>débutant</option>
-      <option value="confirmé"'.if ($ascension->difficulte_Ascension == 'confirmé') { echo 'selected'}.'>confirmé</option>
-      <option value="expert"'.if ($ascension->difficulte_Ascension == 'expert') { echo 'selected'}.'>expert</option>
+      <option value="debutant"'. ($ascension->difficulte_Ascension == 'debutant' ? 'selected' : '') .'>débutant</option>
+      <option value="confirmé"'. ($ascension->difficulte_Ascension == 'confirmé' ? 'selected' : '').'>confirmé</option>
+      <option value="expert"'. ($ascension->difficulte_Ascension == 'expert' ? 'selected' : '').'>expert</option>
     </select>' ;
 
     echo '<label for="difficulte_Ascension">Difficulté</label>';
