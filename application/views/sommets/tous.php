@@ -2,7 +2,7 @@
 
     $home='http://localhost:80/RTAI/compagnie-guides-backoffice/index.php';
     echo '<h1>'.$titre.'</h1>';
-
+    echo '<a href="'.$home.'/sommets/creer/">Ajouter un sommet</a>' ;
     echo '<table><thead><tr><th>Nom</th><th>Altitude</th><th>Actions</th></tr></thead><tbody>' ;
     foreach ($sommets as $sommet){
         echo '<tr>' ;

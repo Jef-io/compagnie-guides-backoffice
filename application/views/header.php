@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Demo CodeIgniter 2021</title>
+    <title>Projet RTAI - Back-office</title>
     <link href="http://localhost:80/RTAI/compagnie-guides-backoffice/css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>

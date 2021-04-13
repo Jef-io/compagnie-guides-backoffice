@@ -28,7 +28,6 @@ nav {
 
 nav div {
     display: grid;
-    /* flex-direction: column; */
     grid-template-rows: repeat(auto,1fr);
     gap: 2vh 0;
     width: fit-content;
@@ -38,7 +37,7 @@ nav a {
     width: 30vw;
 }
 
-nav a, header a, input[type='submit'] {
+nav a, a, input[type='submit'] {
     background-color: #1e5f74;
     color: #F1F1E6;
     border: 5px solid#1e5f74;
@@ -49,21 +48,26 @@ nav a, header a, input[type='submit'] {
     border-radius: 5px;
 }
 
-nav a:active, nav a:visited, header a:active, header a:visited {
+nav a:active, nav a:visited, a:active, a:visited {
     color: #F1F1E6;
 }
 
-nav a:hover, header a:hover, input[type='submit']:hover {
+nav a:hover, a:hover, input[type='submit']:hover {
     background-color: #F1F1E6;
     color: #1e5f74;
 }
 
 nav h2 {
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 main {
     margin-bottom: 6vh;
+}
+
+main>a {
+    float: right;
+    margin-bottom: 2vh;
 }
 
 footer {
@@ -103,6 +107,17 @@ td {
 table a, table a:focus, table a:active, table a:visited {
     color: #F1F1E6;
     text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: normal;
+    border-radius: none;
+}
+
+table a:hover {
+    color: #1e5f74;
 }
 
 input, select {

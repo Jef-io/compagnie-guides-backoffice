@@ -3,7 +3,7 @@
     $home='http://localhost:80/RTAI/compagnie-guides-backoffice/index.php';
 
     echo '<h1>'.$titre.'</h1>';
-
+    echo '<a href="'.$home.'/ascensions/creer/">Ajouter une ascension</a>' ;
     echo '<table><thead><tr><th>Sommet</th><th>Abri</th><th>Difficulté</th><th>Durée</th><th>Actions</th></tr></thead><tbody>' ;
     $counter=0;
     foreach ($ascensions as $ascension){

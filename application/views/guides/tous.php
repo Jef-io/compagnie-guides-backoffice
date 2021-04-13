@@ -3,7 +3,7 @@
     $home='http://localhost:80/RTAI/compagnie-guides-backoffice/index.php';
 
     echo '<h1>'.$titre.'</h1>';
-
+    echo '<a href="'.$home.'/guides/creer/">Ajouter un guide</a>' ;
     echo '<table><thead><tr><th>Nom</th><th>Prénom</th><th>Email</th><th>Actions</th></tr></thead><tbody>' ;
     foreach ($guides as $guide){
         echo '<tr>' ;
