@@ -71,8 +71,8 @@ $route['sommets'] = 'sommets/tous';
 // $route['sommets/(:any)'] = 'sommets/parId/$1';
 
 $route['vallees/creer'] = 'vallees/creer';
-$route['vallees/supprimer/(:any)'] = 'vallees/supprimer/$1&$2';
-$route['vallees/modifier/(:any)'] = 'vallees/modifier/$1&$2';
+$route['vallees/supprimer/(:any)'] = 'vallees/supprimer/';
+$route['vallees/modifier/(:any)'] = 'vallees/modifier/';
 $route['vallees'] = 'vallees/tous';
 // $route['vallees/(:any)'] = 'vallees/parId/$1';
 
