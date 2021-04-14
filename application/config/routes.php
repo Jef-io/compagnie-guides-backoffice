@@ -53,6 +53,9 @@ $route['default_controller'] = 'home/view';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['connexion/connexion'] = 'connexion/connecter';
+$route['connexion/deconnexion'] = 'connexion/deconnecter';
+
 $route['abris/creer'] = 'abris/creer';
 $route['abris/(:any)'] = 'abris/parId/$1';
 $route['abris/supprimer/(:any)'] = 'abris/supprimer/$1';
@@ -68,18 +71,15 @@ $route['sommets/creer'] = 'sommets/creer';
 $route['sommets/supprimer/(:any)'] = 'sommets/supprimer/$1';
 $route['sommets/modifier/(:any)'] = 'sommets/modifier/$1';
 $route['sommets'] = 'sommets/tous';
-// $route['sommets/(:any)'] = 'sommets/parId/$1';
 
 $route['vallees/creer'] = 'vallees/creer';
 $route['vallees/supprimer/(:any)'] = 'vallees/supprimer/';
 $route['vallees/modifier/(:any)'] = 'vallees/modifier/';
 $route['vallees'] = 'vallees/tous';
-// $route['vallees/(:any)'] = 'vallees/parId/$1';
 
 $route['ascensions/creer'] = 'ascensions/creer';
 $route['ascensions/supprimer/(:any)/(:any)'] = 'ascensions/supprimer/$1/$2';
 $route['ascensions/modifier/(:any)/(:any)'] = 'ascensions/modifier/$1/$2';
-// $route['ascensions/(:any)'] = 'ascensions/parId/$1';
 $route['ascensions'] = 'ascensions/tous';
 
 $route['randonnees'] = 'randonnees/tous';
