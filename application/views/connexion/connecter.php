@@ -1,6 +1,6 @@
 <?php
   echo '<h1>'.$titre.'</h1>';
-
+  echo '<div id="login">' ;
   echo form_open('connexion/connecter');
 ?>
 
@@ -12,3 +12,4 @@
 
     <input type="submit" name="submit" value="Se connecter" />
 </form>
+</div>
