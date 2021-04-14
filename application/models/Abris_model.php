@@ -28,8 +28,17 @@ class Abris_model extends CI_Model {
     }
 
     public function delete($id) {
-        $this->db->where('code_Abris', $id);
-        return $this->db->delete('abris');
+        // $this->db->where('code_Abris', $id);
+        // return $this->db->delete('abris');
+
+        
+        $sql = "DELETE concerner, ascension, reserver FROM concerner, ascension, reserver WHERE concerner.code_Sommets = ascension.code_Sommets AND ascension.code_Abris=".$id ;
+        $sql.= " AND concerner.code_Randonnees = reserver.code_Randonnees AND reserver.code_Abris=".$id.";" ;
+        $concerner = $this->db->query($sql) ;
+        $reservations = $this->db->where('code_Abris', $id)->delete('reserver') ;
+        $ascensions = $this->db->where('code_Abris', $id)->delete('ascension') ;
+        $abris = $this->db->where('code_Abris', $id)->delete('abris') ;
+    
     }
     
     public function update($code_Abris, $nom_Abris, $type_Abris, $altitude_Abris, $places_Abris, 

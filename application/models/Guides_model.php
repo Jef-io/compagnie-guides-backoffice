@@ -24,8 +24,17 @@ class Guides_model extends CI_Model{
   }
 
   public function delete($id) {
-    $this->db->where('code_Guides', $id);
-    return $this->db->delete('guides');
+    // $this->db->where('code_Guides', $id);
+    // return $this->db->delete('guides');
+
+    $sql = "SELECT code_Randonnees FROM randonnees WHERE code_Guides=".$id.";" ;
+    $code_Guides = $this->db->query($sql)->result() ;
+    foreach ($code_Guides as $code) {
+        $this->db->where('code_Randonnees', $code->code_Randonnees)->delete('concerner') ;
+        $this->db->where('code_Randonnees', $code->code_Randonnees)->delete('reserver') ;
+    }
+    $this->db->where('code_Guides', $id)->delete('randonnees') ;
+    $this->db->where('code_Guides', $id)->delete('guides') ;
   }
 
   public function update($id, $nom, $prenom, $email, $motDePasse) {

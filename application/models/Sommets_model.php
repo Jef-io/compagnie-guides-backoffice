@@ -31,8 +31,12 @@ class Sommets_model extends CI_Model {
     }
     
     public function delete($id) {
-        $this->db->where('code_Sommets', $id);
-        return $this->db->delete('sommets');
+        // $this->db->where('code_Sommets', $id);
+        // return $this->db->delete('sommets');
+
+        $ascensions = $this->db->where('code_Sommets', $id)->delete('ascension') ;
+        $concerner = $this->db->where('code_Sommets', $id)->delete('concerner') ;
+        $sommets = $this->db->where('code_Sommets', $id)->delete('sommets') ;
     }
 }
 ?>
