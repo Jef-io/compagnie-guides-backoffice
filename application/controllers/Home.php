@@ -1,5 +1,9 @@
 <?php
-class Home extends CI_Controller{
+class Home extends MY_Controller {
+  public function __construct() {
+    parent::__construct();
+  }
+
   public function view($page = 'menu'){
     //Vérifier si la page demandée existe
     if (!file_exists(APPPATH.'views/home/'.$page.'.php')){

@@ -1,5 +1,5 @@
 <?php
-class Vallees extends CI_Controller {
+class Vallees extends MY_Controller {
   
     public function __construct(){
         parent::__construct();
@@ -25,9 +25,7 @@ class Vallees extends CI_Controller {
   }
 
   public function creer(){
-    $this->load->model('vallees_model');
     $this->load->helper('form');
-    $this->load->helper('url');
     $this->load->library('form_validation');
 
     $data['titre'] = 'Creer une vallée';
@@ -47,7 +45,6 @@ class Vallees extends CI_Controller {
   }
 
   public function modifier($id){
-    $this->load->model('vallees_model');
     $this->load->helper('form');
     $this->load->helper('url');
     $this->load->library('form_validation');
@@ -72,8 +69,6 @@ class Vallees extends CI_Controller {
   
   public function supprimer($id){
     $this->load->helper('url');
-    $this->load->model('vallees_model');
-
     $this->vallees_model->delete($id);
 
     redirect('/vallees', 'refresh');

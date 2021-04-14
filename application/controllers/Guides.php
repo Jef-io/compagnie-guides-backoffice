@@ -1,11 +1,11 @@
 <?php
-class Guides extends CI_Controller{
+class Guides extends MY_Controller{
   public function __construct(){
     parent::__construct();
+    $this->load->model('guides_model');
   }
 
   public function tous(){
-    $this->load->model('guides_model');
     $data['guides'] = $this->guides_model->get();
     $data['titre'] = 'Liste des guides : ';
 
@@ -15,7 +15,6 @@ class Guides extends CI_Controller{
   }
 
   public function parId($id){
-    $this->load->model('guides_model');
     $data['guides'] = $this->guides_model->find($id);
     $data['titre'] = "Guide #".$id." : ";
 
@@ -25,9 +24,7 @@ class Guides extends CI_Controller{
   }
 
   public function creer(){
-    $this->load->model('guides_model');
     $this->load->helper('form');
-    $this->load->helper('url');
     $this->load->library('form_validation');
 
     $data['titre'] = 'Ajouter un guide';
@@ -54,7 +51,6 @@ class Guides extends CI_Controller{
   }
 
   public function modifier($id){
-        $this->load->model('guides_model');
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->library('form_validation');
@@ -84,8 +80,6 @@ class Guides extends CI_Controller{
   }
 
   public function supprimer($id){
-    $this->load->helper('url');
-    $this->load->model('guides_model');
 
     $this->guides_model->delete($id);
 

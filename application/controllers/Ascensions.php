@@ -1,5 +1,5 @@
 <?php
-class Ascensions extends CI_Controller {
+class Ascensions extends MY_Controller {
   
     public function __construct(){
         parent::__construct();
@@ -68,9 +68,7 @@ class Ascensions extends CI_Controller {
   }
 
   public function modifier($id_sommet, $id_abri){
-    $this->load->model('ascensions_model');
     $this->load->helper('form');
-    $this->load->helper('url');
     $this->load->library('form_validation');
 
     $data['titre'] = 'Modifier l\'ascension entre le sommet numéro '.$id_sommet.'et l\'abri numéro '.$id_abri ;
@@ -100,13 +98,10 @@ class Ascensions extends CI_Controller {
     }
 }
 
-public function supprimer($id_sommet, $id_abri){
-$this->load->helper('url');
-$this->load->model('ascensions_model');
+  public function supprimer($id_sommet, $id_abri){
+    $this->ascensions_model->delete($id_sommet, $id_abri);
 
-$this->ascensions_model->delete($id_sommet, $id_abri);
-
-redirect('/ascensions', 'refresh');
-}
+    redirect('/ascensions', 'refresh');
+  }
 } 
 ?>

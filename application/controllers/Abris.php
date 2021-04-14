@@ -1,5 +1,5 @@
 <?php
-class Abris extends CI_Controller {
+class Abris extends MY_Controller {
   
     public function __construct(){
         parent::__construct();
@@ -70,9 +70,7 @@ class Abris extends CI_Controller {
   }
 
   public function modifier($id){
-    $this->load->model('abris_model');
     $this->load->helper('form');
-    $this->load->helper('url');
     $this->load->library('form_validation');
 
     $data['titre'] = 'Modifier l\'abri numéro '.$id ;
@@ -109,13 +107,9 @@ class Abris extends CI_Controller {
     }
 }
 
-public function supprimer($id){
-$this->load->helper('url');
-$this->load->model('abris_model');
-
-$this->abris_model->delete($id);
-
-redirect('/abris', 'refresh');
-}
+  public function supprimer($id){
+    $this->abris_model->delete($id);
+    redirect('/abris', 'refresh');
+  }
 } 
 ?>

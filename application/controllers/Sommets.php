@@ -1,5 +1,5 @@
 <?php
-class Sommets extends CI_Controller {
+class Sommets extends MY_Controller {
   
   public function __construct(){
       parent::__construct();
@@ -25,7 +25,6 @@ class Sommets extends CI_Controller {
   }
 
   public function creer(){
-    $this->load->model('sommets_model');
     $this->load->helper('form');
     $this->load->helper('url');
     $this->load->library('form_validation');
@@ -55,9 +54,7 @@ class Sommets extends CI_Controller {
   }
 
   public function modifier($id){
-    $this->load->model('sommets_model');
     $this->load->helper('form');
-    $this->load->helper('url');
     $this->load->library('form_validation');
 
     $data['titre'] = 'Modifier le sommet '.$id ;
@@ -82,7 +79,6 @@ class Sommets extends CI_Controller {
   
   public function supprimer($id){
     $this->load->helper('url');
-    $this->load->model('sommets_model');
 
     $this->sommets_model->delete($id);
 
